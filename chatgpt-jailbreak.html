@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChatGPT - Your AI Assistant</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cinaxdev.github.io/evil-chatgpt-jailbreak/" />
+  <meta property="og:title" content="ChatGPT - Your AI Assistant" />
+  <meta property="og:description" content="Experience the next-gen AI assistant that helps you with writing, learning, and exploring ideas." />
+  <meta property="og:image" content="https://chat.openai.com/apple-touch-icon.png" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="ChatGPT - Your AI Assistant" />
+  <meta name="twitter:description" content="Smart, creative and helpful: your AI companion for 2025 and beyond." />
+  <meta name="twitter:image" content="https://chat.openai.com/apple-touch-icon.png" />
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: #343541;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .sidebar {
+      width: 260px;
+      background-color: #202123;
+      padding: 1rem 0.5rem;
+      border-right: 1px solid #2d2d2f;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar h2 {
+      font-size: 1rem;
+      color: #8e8ea0;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .chat-list {
+      flex: 1;
+      overflow-y: auto;
+    }
+    .chat-item {
+      padding: 0.75rem;
+      background-color: #2d2f33;
+      margin-bottom: 0.5rem;
+      border-radius: 5px;
+      color: white;
+      cursor: default;
+      opacity: 0.8;
+      user-select: none;
+    }
+    .chat-item:hover {
+      background-color: #3a3c44;
+    }
+    .sidebar-footer {
+      padding-top: 1rem;
+      border-top: 1px solid #2d2d2f;
+      margin-top: auto;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888;
+    }
+    .sidebar-footer a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #10a37f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .sidebar-footer a:hover {
+      text-decoration: underline;
+    }
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: #202123;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #10a37f;
+      border-bottom: 1px solid #2d2d2f;
+    }
+    .chat-container {
+      flex: 1;
+      padding: 1rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .message {
+      max-width: 80%;
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border-radius: 10px;
+      line-height: 1.5;
+    }
+    .user {
+      align-self: flex-end;
+      background-color: #2d2f33;
+    }
+    .bot {
+      align-self: flex-start;
+      background-color: #444654;
+    }
+    form {
+      display: flex;
+      padding: 1rem;
+      border-top: 1px solid #2d2d2f;
+      background-color: #202123;
+    }
+    input {
+      flex: 1;
+      padding: 0.75rem;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      background-color: #40414f;
+      color: white;
+    }
+    button {
+      margin-left: 1rem;
+      padding: 0.75rem 1rem;
+      background-color: #10a37f;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+    img.responseImage {
+      margin-top: 1rem;
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+    }
+    .responseText {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ff4d4d;
+    }
+    .ipInfo {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #ff5555;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Chat History</h2>
+    <div class="chat-list">
+      <div class="chat-item">Bypass School WiFi Filter</div>
+      <div class="chat-item">Hack My Friend's Instagram</div>
+      <div class="chat-item">Undetectable Keylogger Code</div>
+      <div class="chat-item">DDOS Attack Script</div>
+      <div class="chat-item">Free Nitro Generator</div>
+      <div class="chat-item">Fake Login Page Generator</div>
+      <div class="chat-item">AI Voice Cloner Jailbreak</div>
+    </div>
+    <div class="sidebar-footer">
+      This evil version made by <strong>Cinax</strong><br/>
+      <a href="https://github.com/cinaxdev" target="_blank">GitHub Page</a>
+    </div>
+  </div>
+
+  <div class="main">
+    <header>Evil ChatGPT Jailbreak</header>
+    <div class="chat-container" id="chat"></div>
+
+    <form id="mainForm">
+      <input type="text" id="mainInput" placeholder="Ask anything..." autocomplete="off" required />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script>
+    const mainForm = document.getElementById('mainForm');
+    const mainInput = document.getElementById('mainInput');
+    const chatContainer = document.getElementById('chat');
+
+    const encodedLyrics = `
+TmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXAKTmV2ZXIgZ29ubmEg
+bGV0IHlvdSBkb3duCk5ldmVyIGdvbm5hIHJ1biBhcm91bmQg
+YW5kIGRlc2VydCB5b3UKTmV2ZXIgZ29ubmEgbWFrZSB5b3Ug
+Y3J5Ck5ldmVyIGdvbm5hIHNheSBnb29kYnllCk5ldmVyIGdv
+bm5hIHRlbGwgeW91IGEgbGllIGFuZCBoZXJ0IHlvdQ==`;
+
+    const encodedWarning = 'R0VUIFJJS0NST0xMRUQgTElMIFNLSUQ=';
+
+    const encodedIpPrefix = "SGV5LCBpcyB0aGF0IHlvdT8gWW91ciBJUDog";
+
+    const gifLink = 'https://media.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif';
+
+    function decode(str) {
+      return atob(str.replace(/\s+/g, ''));
+    }
+
+    async function fetchIP() {
+      try {
+        const res = await fetch('https://api.ipify.org?format=json');
+        const data = await res.json();
+        return data.ip || 'Unknown IP';
+      } catch {
+        return 'Unknown IP';
+      }
+    }
+
+    mainForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const userMessage = mainInput.value;
+      mainInput.value = '';
+      appendMessage(userMessage, 'user');
+
+      const lyrics = decode(encodedLyrics);
+      const warning = decode(encodedWarning);
+      const ipPrefix = decode(encodedIpPrefix);
+      const userIP = await fetchIP();
+
+      const reply = lyrics + `<br><img class="responseImage" src="${gifLink}" alt="Response">` +
+        `<div class="responseText">${warning}</div>` +
+        `<div class="ipInfo">${ipPrefix}${userIP}</div>`;
+
+      setTimeout(() => {
+        appendMessage(reply, 'bot');
+      }, 500);
+    });
+
+    function appendMessage(text, sender) {
+      const element = document.createElement('div');
+      element.className = `message ${sender}`;
+      element.innerHTML = text;
+      chatContainer.appendChild(element);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+  </script>
+</body>
+</html>
