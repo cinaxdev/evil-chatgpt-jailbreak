@@ -3,7 +3,7 @@
 ### 🚀 Quick Start
 Click below to download the file and run it in your browser:
 
-👉 [Download Evil ChatGPT Jailbreak](https://github.com/cinaxdev/evil-chatgpt-jailbreak/raw/main/chatgpt-jailbreak.html)
+[⬇️ Download HTML File](https://github.com/cinaxdev/evil-chatgpt-jailbreak/blob/main/chatgpt-jailbreak.html?raw=true)
 
 Evil ChatGPT Jailbreak is an advanced AI chatbot interface designed for experimental and educational purposes.  
 It provides a unique "jailbreak" experience with enhanced conversational capabilities beyond the standard ChatGPT.
